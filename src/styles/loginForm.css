@@ -1,161 +1,211 @@
+/* ---------- WRAPPER CHUNG ---------- */
 .login-wrapper {
-    display: flex;
-    height: 80vh;
-    width: 130vh;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* đổ đậm hơn, lan rộng hơn */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .login-left {
-    flex: 1;
-    background: linear-gradient(170deg, #36b8ac, #a6ddff);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px 0 0 30px;
-    padding: 2rem;
-    position: relative;
-  }
-  /* Chèn hình */
-  .login-left::before{
-      content: "";
-      position: absolute;
-      top: 100px; left: 0;right: 0; bottom: 0;
-      background: url(../assets/zectIcon.png) center center/cover no-repeat;
-      opacity: 0.5;
-      z-index: 0;
-    }
-  
-  .login-left h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    z-index: 1;
-  }
-  
-  .login-left p {
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 300px;
-    z-index: 1;
-  }
-  
-/* ////////////////////////////////////////// */
-  /* RIGHT */
-  .login-right {
-    flex: 1;
-    background: linear-gradient(13deg, #48575c 40%,#686868 70%, #787878);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 0 30px 30px 0;
-  }
-  
-  .login-right form {
-    background-color: white;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-right form h2 {
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .login-right input[type="text"],
-  .login-right input[type="password"],
-  .login-right input[type="email"] {
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #222121;
-    border-radius: 8px;
-    font-size: 1rem;
-    opacity: 0.5; /* Độ trong suốt của ô nhập liệu */
-  }
-  
-  .remember-me {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .remember-me input {
-    margin-right: 0.5rem;
-  }
-  
-  .login-right button {
-    background-color: #50cfc3;
-    color: white;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);;
-    transition: background-color 0.3s;
-  }
-  
-  .login-right button:hover {
-    background-color: #45b9af;
-  }
-  
-  .forgot {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #888;
-    cursor: pointer;
-  }
-  
-  .forgot:hover {
-    text-decoration: underline;
-  }
+  display: flex;
+  height: 80vh;
+  width: 130vh;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
 
-  .tab-switcher {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    position: absolute;
-    top: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .tab-switcher span {
-    color: #888;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.3s;
-  }
-  
-  .tab-switcher span.active {
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .tab-switcher span.active::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #36b8ac;
-  }
-  
-  /* Để khối login-right không bị đè */
-  .login-right {
-    position: relative;
-    padding-top: 4rem; /* để không che form */
-  }
+/* ---------- LEFT PANEL ---------- */
+.login-left {
+  flex: 1;
+  background: linear-gradient(170deg, #36b8ac, #a6ddff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px 0 0 30px;
+  padding: 2rem;
+  position: relative;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.login-left::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../assets/zectIcon.png) center center/cover no-repeat;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.login-left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+.login-left p {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 300px;
+  z-index: 1;
+}
+
+/* ---------- RIGHT PANEL ---------- */
+.login-right {
+  flex: 1;
+  background: linear-gradient(13deg, #48575c 40%, #686868 70%, #787878);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0 30px 30px 0;
+  font-family: "JetBrains Mono", monospace;
+  position: relative;
+  padding-top: 5rem; /* tránh đè tab-switcher */
+  overflow: hidden;
+}
+
+/* ---------- TAB SWITCHER ---------- */
+.tab-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.tab-switcher span {
+  color: #afaeae;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.tab-switcher span.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.tab-switcher span.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #36b8ac;
+}
+
+/* ---------- FORM SLIDER WRAPPER ---------- */
+.form-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* SLIDER BÊN TRONG */
+.form-slider {
+  display: flex;
+  width: 200%;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* ---------- FORM PANEL (LOGIN / SIGNUP) ---------- */
+.form-panel {
+  width: 50%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-panel h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-panel input[type="text"],
+.form-panel input[type="password"],
+.form-panel input[type="email"] {
+  width: 80%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #222121;
+  border-radius: 8px;
+  font-size: 1rem;
+  opacity: 0.8;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.form-panel button {
+  width: 80%;
+  background-color: #50cfc3;
+  color: white;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.form-panel button:hover {
+  background-color: #45b9af;
+}
+
+/* ---------- GHI NHỚ VÀ LINK ---------- */
+.remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 0.5rem 1rem;
+  color: #333;
+  width: 90%;
+}
+
+.remember-me input {
+  margin-right: 0.5rem;
+}
+
+.forgot {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* ---------- TERMS ---------- */
+.terms {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.terms .terms-icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.terms:hover .terms-icon {
+  transform: translateX(-0.5rem);
+}
