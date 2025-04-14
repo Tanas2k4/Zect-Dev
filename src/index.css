@@ -23,12 +23,17 @@ a:hover {
 }
 
 body {
-  background: linear-gradient(170deg, #284b61, #36b8ac);
+  height: 100%;
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  background: linear-gradient(170deg, #284b61, #36b8ac);
+  /* place-items: center; */
+  /* min-width: 320px; */
   min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 h1 {
